@@ -21,10 +21,9 @@ export const AccountOverview = ({ data }) => {
             <div>
               <AccountIcon>
                 <AccountLetter>
-                  J
+                  {data.supportContact.name.charAt(0)}
                 </AccountLetter>
               </AccountIcon>
-
               <div>
                 <AccountDetails primary>
                   {data.supportContact.name}
@@ -44,6 +43,7 @@ export const AccountOverview = ({ data }) => {
     </div>
   )
 }
+
 
 AccountOverview.propTypes = {
   name: PropTypes.string,
