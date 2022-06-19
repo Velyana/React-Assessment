@@ -1,3 +1,24 @@
 .SalesOverview {
-    border: 1px solid red;
-  }
+  background-color: white;
+  padding: 0 !important;
+  box-shadow: 4.0px 8.0px 8.0px rgba(209, 207, 207, 0.38);
+}
+
+.sales-text-container {
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  padding: 20px;
+
+}
+
+.info-icon {
+  float: right;
+}
+
+.percentage-container {
+  padding: 20px;
+}
+
+.upload {
+  border-right: 1px solid lightgray;
+}

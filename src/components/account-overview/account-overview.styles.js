@@ -26,10 +26,21 @@ export const AccountLetter = styled.h1`
     color: black;
 `
 
-export const AccountDetails = styled.p`
+export const AccountDetails = styled.span`
     padding-left: 1em;
     color: #737373;
     display: inline;
     font-weight: ${props => props.primary ? "bold" : "normal"};
     float: ${props => props.primary ? "left" : "none"};
+`
+
+export const AccountDetailsContainer = styled.span`
+    display: inline-block;
+    padding-left: 1em;
+    color: #737373;
+    display: inline;
+    font-size: 13px;
+    margin-bottom: 0;
+    font-weight: bold;
+    float: left;
 `

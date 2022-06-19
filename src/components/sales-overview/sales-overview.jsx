@@ -1,40 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle, faUpload } from '@fortawesome/free-solid-svg-icons';
+import { SalesInfo, SalesTitle } from './sales-overview.styles';
+import UploadOverview from '../upload-overview/upload-overview';
 import './sales-overview.css';
-import { faBullseye, faCloudUploadAlt, faFileUpload, faInfoCircle, faUpload } from '@fortawesome/free-solid-svg-icons';
-import { SalesInfo, UploadData, UploadText, SalesTitle } from './sales-overview.styles';
-
-function calculatePercentage(partialValue, totalValue) {
-    return (100 * partialValue) / totalValue;
-}
 
 export const SalesOverview = ({ data }) => {
     console.log(data);
 
     return (
         <div className="SalesOverview container">
-            <div>
+            <div className='sales-text-container'>
                 <SalesTitle>
                     <FontAwesomeIcon icon={faUpload} color="#44C1F2" />
-                    Sales
-                    <FontAwesomeIcon icon={faInfoCircle} color="#D3D3D3" />
+                    <span> Sales</span>
+                    <span className="info-icon">
+                        <FontAwesomeIcon icon={faInfoCircle} color="#D3D3D3" />
+                    </span>
                 </SalesTitle>
-
-                <SalesInfo>You had {data.salesOverview.uploads} uploads and {data.salesOverview.linesSaved} lines added.</SalesInfo>
+                <SalesInfo>You had
+                    <span style={{ fontWeight: 'bold' }}> {data.salesOverview.uploads} uploads </span>
+                    and <span style={{ fontWeight: 'bold' }}> {data.salesOverview.linesSaved} </span>
+                    lines added.</SalesInfo>
             </div>
             <div className="row">
-
-                {/* border: 1px solid #8C8C8C; */}
-
-                <p className="col">
-                    <UploadData>{calculatePercentage(data.salesOverview.successfulUploads, data.salesOverview.uploads)}%</UploadData>
-                    <UploadText>Upload success</UploadText>
-                </p>
-                <p className="col">
-                    <UploadData>{calculatePercentage(data.salesOverview.linesSaved, data.salesOverview.linesAttempted)}% </UploadData>
-                    <UploadText>Lines saved</UploadText>
-                </p>
+                <div className="col percentage-container upload">
+                    <UploadOverview partialValue={data.salesOverview.successfulUploads}
+                        totalValue={data.salesOverview.uploads} text="Upload success" />
+                </div>
+                <div className="col percentage-container">
+                    <UploadOverview partialValue={data.salesOverview.linesSaved}
+                        totalValue={data.salesOverview.linesAttempted} text="Lines saved" />
+                </div>
             </div>
         </div>
     )

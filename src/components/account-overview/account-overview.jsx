@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import './account-overview.css';
-import { AccountIcon, AccountLetter, AccountTitle, AccountDetails, AccountContact } from './account-overview.styles';
+import { AccountIcon, AccountLetter, AccountTitle, AccountDetails, AccountContact, AccountDetailsContainer } from './account-overview.styles';
 
 
 export const AccountOverview = ({ data }) => {
@@ -16,7 +16,7 @@ export const AccountOverview = ({ data }) => {
           <AccountTitle>Account Overview</AccountTitle>
         </div>
         <div className="col">
-          <div>
+          <div className="support-contact-container">
             <AccountContact>Your feefo support contact</AccountContact>
             <div>
               <AccountIcon>
@@ -28,13 +28,15 @@ export const AccountOverview = ({ data }) => {
                 <AccountDetails primary>
                   {data.supportContact.name}
                 </AccountDetails>
-                <FontAwesomeIcon icon={faEnvelope} color="gray" />
-                <AccountDetails>
-                  {data.supportContact.email}
-                </AccountDetails>
-                <AccountDetails>
-                  {data.supportContact.phone}
-                </AccountDetails>
+                <AccountDetailsContainer>
+                  <FontAwesomeIcon icon={faEnvelope} color="gray" />
+                  <AccountDetails>
+                    {data.supportContact.email}
+                  </AccountDetails>
+                  <AccountDetails>
+                    {data.supportContact.phone}
+                  </AccountDetails>
+                </AccountDetailsContainer>
               </div>
             </div>
           </div>

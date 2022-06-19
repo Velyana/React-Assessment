@@ -1,4 +1,7 @@
 .AccountOverview {
-  /*background-color: lightblue; */
-  border: 1px solid;
+  padding-bottom: 30px;
+}
+
+.support-contact-container {
+  width: 330px;
 }

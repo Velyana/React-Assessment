@@ -1,9 +1,14 @@
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: aliceblue !important;
 }
 
 .App {
   text-align: center;
+  margin: auto;
+  width: 50%;
+  height: 100vh;
+  padding: 24px;
 }
 
 .App-logo {
@@ -36,6 +41,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
