@@ -17,7 +17,6 @@ export const UploadOverview = ({ partialValue, totalValue, text }) => {
     )
 }
 
-
 UploadOverview.propTypes = {
     uploads: PropTypes.number,
     successfulUploads: PropTypes.number,

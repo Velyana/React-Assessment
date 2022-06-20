@@ -7,7 +7,6 @@ import UploadOverview from '../upload-overview/upload-overview';
 import './sales-overview.css';
 
 export const SalesOverview = ({ data }) => {
-    console.log(data);
 
     return (
         <div className="SalesOverview container">
@@ -38,13 +37,12 @@ export const SalesOverview = ({ data }) => {
     )
 }
 
-
 SalesOverview.propTypes = {
     uploads: PropTypes.number,
     successfulUploads: PropTypes.number,
     linesAttempted: PropTypes.number,
-    linesSaved: PropTypes.number
-    /* lastUploadDate: PropTypes.number */
+    linesSaved: PropTypes.number,
+    lastUploadDate: PropTypes.number
 };
 
 export default SalesOverview;

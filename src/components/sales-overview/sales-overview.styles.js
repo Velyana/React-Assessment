@@ -9,5 +9,4 @@ export const SalesTitle = styled.p`
 export const SalesInfo = styled.p`
     text-align: left;
     color: #737373;
-    
 `

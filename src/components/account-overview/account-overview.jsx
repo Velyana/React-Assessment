@@ -5,7 +5,6 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import './account-overview.css';
 import { AccountIcon, AccountLetter, AccountTitle, AccountDetails, AccountContact, AccountDetailsContainer } from './account-overview.styles';
 
-
 export const AccountOverview = ({ data }) => {
   console.log(data);
 
@@ -45,7 +44,6 @@ export const AccountOverview = ({ data }) => {
     </div>
   )
 }
-
 
 AccountOverview.propTypes = {
   name: PropTypes.string,

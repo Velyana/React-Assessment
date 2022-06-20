@@ -3,7 +3,6 @@ import AccountOverview from './components/account-overview/account-overview';
 import SalesOverview from './components/sales-overview/sales-overview';
 
 function App() {
-  /* Hooks */
 
   const accountOverviewStub = {
     supportContact: {
