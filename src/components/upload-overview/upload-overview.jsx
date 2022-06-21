@@ -9,10 +9,10 @@ function calculatePercentage(partialValue, totalValue) {
 export const UploadOverview = ({ partialValue, totalValue, text }) => {
     return (
         <div className="UploadOverview container">
-            <p className="col">
+            <div className="col">
                 <UploadPercent>{calculatePercentage(partialValue, totalValue)}%</UploadPercent>
                 <UploadText>{text}</UploadText>
-            </p>
+            </div>
         </div>
     )
 }
